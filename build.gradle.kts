@@ -11,7 +11,7 @@ buildscript {
     }
 
     dependencies {
-//        classpath(Build.hiltAndroidGradlePlugin)
+        classpath(Build.hiltAndroidGradlePlugin)
     }
 }
 
