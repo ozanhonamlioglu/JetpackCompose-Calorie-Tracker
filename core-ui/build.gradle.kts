@@ -4,11 +4,11 @@ plugins {
 }
 
 apply {
-    from("$rootDir/base-module.gradle")
+    from("$rootDir/compose-module.gradle")
 }
 
 android {
-    namespace = "com.example.core"
+    namespace = "com.example.core_ui"
 }
 
 dependencies {
