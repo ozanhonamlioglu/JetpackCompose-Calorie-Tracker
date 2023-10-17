@@ -60,6 +60,7 @@ dependencies {
     implementation(Compose.graphics)
     implementation(Compose.uiToolingPreview)
     implementation(Compose.material)
+    implementation(Compose.navigation)
     implementation(AndroidX.appCompat)
 
     implementation(DaggerHilt.hiltAndroid)
