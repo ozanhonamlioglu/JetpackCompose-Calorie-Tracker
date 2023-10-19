@@ -64,6 +64,7 @@ dependencies {
     implementation(AndroidX.appCompat)
 
     implementation(DaggerHilt.hiltAndroid)
+    implementation(Compose.hiltNavigationCompose)
     kapt(DaggerHilt.hiltCompiler)
 
     implementation(project(Modules.core))
