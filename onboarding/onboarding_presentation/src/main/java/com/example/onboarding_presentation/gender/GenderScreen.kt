@@ -85,6 +85,7 @@ fun GenderScreen(
         }
 
         ActionButton(
+            isEnabled = true,
             text = stringResource(id = R.string.next),
             onClick = viewModel::onNextClick,
             modifier = Modifier.align(Alignment.BottomEnd),
