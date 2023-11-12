@@ -62,7 +62,7 @@ class DefaultPreferences(private val sharedPref: SharedPreferences) : Preference
             .apply()
     }
 
-    override fun loadInfo(): UserInfo {
+    override fun loadUserInfo(): UserInfo {
         val age = sharedPref.getInt(Preferences.KEY_AGE, -1)
         val height = sharedPref.getInt(Preferences.KEY_HEIGHT, -1)
         val weight = sharedPref.getFloat(Preferences.KEY_WEIGHT, -1f)
@@ -85,5 +85,15 @@ class DefaultPreferences(private val sharedPref: SharedPreferences) : Preference
             proteinRatio = proteinRatio,
             fatRatio = fatRatio
         )
+    }
+
+    override fun saveShouldShowOnboarding(shouldShow: Boolean) {
+        sharedPref.edit()
+            .putBoolean(Preferences.KEY_SHOULD_SHOW_ONBOARDING, shouldShow)
+            .apply()
+    }
+
+    override fun loadShouldShowOnboarding(): Boolean {
+        return sharedPref.getBoolean(Preferences.KEY_SHOULD_SHOW_ONBOARDING, true)
     }
 }

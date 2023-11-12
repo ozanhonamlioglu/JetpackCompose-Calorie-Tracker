@@ -15,7 +15,7 @@ android {
 
 dependencies {
     implementation(project(Modules.core))
-    implementation(project(Modules.trackerDomain))
+    api(project(Modules.trackerDomain))
 
     implementation(Retrofit.okHttp)
     implementation(Retrofit.retrofit)
